@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Pizza Calculator</title>
+    <script src="jquery-3.6.0.js"></script>
     <script src="trip.js"></script>
+    <style>
+        .output {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <h1>Pizza Calculator</h1>
-<button onclick="calculate()">Calculate My Pizza Cost</button>
+
+<fieldset>
+    <legend>Pizza Information</legend>
+    <label for="totalPizza">Number of pizzas being ordered</label>
+    <input type="number" id="totalPizza" min="0" max="100" step="1">
+    <br>
+    <label for="pizzaToppings">Number of total toppings</label>
+    <input type="number" id="pizzaToppings" min="0" step="1">
+    <br>
+    <label for="totalCoworkers">Number of people splitting the cost</label>
+    <input type="number" id="totalCoworkers">
+    <br>
+</fieldset>
+<br>
+<button>Calculate My Pizza Cost</button>
+
+<p class="output">The pizza bill will be $<span id="totalCost"></span>.</p>
+<p class="output">Each coworker will pay <span id="individualCost"></span>.</p>
+
+<p>Have a great day!</p>
+
+
 </body>
 </html>
